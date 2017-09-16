@@ -1,0 +1,33 @@
+.ust{
+ background-color:rgba(232, 222, 229, 0.6);
+ width:80%;
+ margin-top:50px;
+ margin-bottom:50px;
+font-family: 'Lato', sans-serif;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+h1{
+	color:rgba(255,81,55,1);
+	font-weight: bold;
+
+}
+
+p{
+	font-size: 1.1em;
+}
+
+#hesapla{
+  margin:10px;
+}
+
+#mevcutkredi{
+  display:none;
+}
+
+.donemDersSayisi{
+  width:40px;
+}
+.submit{
+  margin-left:5px;
+}

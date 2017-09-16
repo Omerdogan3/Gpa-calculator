@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Gpa Calculator</title>
+  
+  
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+
+      <link rel="stylesheet" href="css/style.css">
+       <link rel="stylesheet" href="css/animate.css">
+       <link rel="stylesheet" href="css/hover-min.css">
+       <link rel="stylesheet" href="css/background.css">
+  
+</head>
+
+<body><div class="panel top pen">
+
+  <div class="container ust ">
+  	<div class="text-center ">
+    	<h1>Universite Not Hesaplama</h1>
+   	 	<p>Hesaplama Sekli
+   
+   <form name="donemSec">
+    <input type="radio" name="ort" checked="checked" value="1">Donem Ortalamasi</input>
+    <br>
+    <input type="radio" name="ort" value="2" >Genel Ortalama</input>
+  </form>
+
+<script>
+    var rad = document.donemSec.ort;
+    var prev = null;
+   
+    for(var i = 0; i < rad.length; i++) {
+        rad[i].onclick = function() {
+            (prev)? console.log(prev.value):null;
+            if(this !== prev) {
+                prev = this;
+            }
+            if(this.value == 1){    
+         document.getElementById("dersSayisiEnter").style.display = 'inline';
+            
+              document.getElementById("mevcutkredi").style.display = 'none';
+            }else if(this.value == 2){
+               document.getElementById("dersSayisiEnter").style.display = 'none';
+              document.getElementById("mevcutkredi").style.display = 'inline';
+            }
+        };
+    }
+</script>
+
+
+      <div id="dersSayisiEnter">
+        <button class="button hvr-shadow" type="button" onclick="dersNotlari();" >Ders Ekle</button>
+        </p>
+</div>
+ </p>
+
+<div id="mevcutkredi" style="display-none">
+  <p>Mevcut Toplam Kredi
+        <input id="mevcutkrediInput" type="number" name="Enter" min="0" max="200"></input></p>
+ </p>
+
+<p>Mevcut Ortalama
+        <input id="mevcutOrtalamaInput" type="number" name="Enter" min="0"></input></p>
+ </p>
+
+<button class="button hvr-shadow" type="button" onclick="dersNotlari();" >Ders Ekle</button></p>
+ </p>
+</div>
+
+
+ 
+    
+    <p>Not Sistemi: 
+    <select>
+    <option value="AA">AA, BA, BB, CB, CC, DC, DD, FD, FF</option>
+    <option value="A">A, A-, B+, B, B-, C+, C, C-, D+, D, F</option>
+  </select>  
+      
+<div id="notlar"></div>    
+    
+    <button class="button hvr-shadow" type="button" id="hesapla"onclick="hesapla();">Hesapla</button> 
+  
+      
+      </div>
+    </div>
+  </div>
+</div>
+  
+    <script  src="js/index.js"></script>
+
+
+
+</div>
+</body>
+</html>

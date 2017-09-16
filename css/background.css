@@ -1,0 +1,60 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+@-webkit-keyframes scrollBad {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 -320px;
+  }
+}
+@keyframes scrollBad {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 -320px;
+  }
+}
+@-webkit-keyframes scrollGood {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(0, -320px, 0);
+            transform: translate3d(0, -320px, 0);
+  }
+}
+@keyframes scrollGood {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(0, -320px, 0);
+            transform: translate3d(0, -320px, 0);
+  }
+}
+.pen {
+  
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+}
+
+.panel {
+  height: 100%;
+}
+
+.top {
+  
+  background-image: url(http://scarbroughstudios.com/img/codepen.svg);
+  background-position: center center;
+  -webkit-animation: scrollBad 60s linear infinite;
+  animation: scrollBad 60s linear infinite;
+}
